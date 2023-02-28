@@ -5,17 +5,13 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.dwcj.samples</groupId>
-    <artifactId>hello-world-java</artifactId>
-    <version>0.009</version>
+    <artifactId>dnd-sample</artifactId>
+    <version>0.000</version>
 
     <properties>
-        <maven.compiler.source>11</maven.compiler.source>
-        <maven.compiler.target>11</maven.compiler.target>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
 
-        <!-- utilize this line or create dwcj-lib in your settings.xml profile -->
-        <!--
-        <dwcj-lib>/bbx/plugins/DWCJ/lib/dwcj-0.009.jar</dwcj-lib>
-        -->
 
     </properties>
 
@@ -23,12 +19,11 @@
         <dependency>
             <groupId>org.dwcj</groupId>
             <artifactId>dwcj-engine</artifactId>
-            <version>0.11.0</version>
+            <version>0.12.0-SNAPSHOT</version>
         </dependency>
     </dependencies>
 
     <build>
-        <finalName>HelloWorldJava</finalName>
         <plugins>
             <!-- Set the jar output Directory -->
             <plugin>
@@ -37,6 +32,14 @@
                 <version>2.3.2</version>
                 <configuration>
                     <outputDirectory>target/lib/</outputDirectory>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>17</source>
+                    <target>17</target>
                 </configuration>
             </plugin>
         </plugins>
